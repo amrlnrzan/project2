@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+        background-color: #f8f8f8;
+      }
+
+      header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      hr {
+        margin: 30px 0;
+        border: 1px solid #ddd;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #34495e;
+        padding: 10px 20px;
+      }
+
+      .navbar .logo {
+        color: white;
+        font-size: 1.8em;
+        font-weight: bold;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-left: 20px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 10px;
+      }
+
+      .navbar ul li a:hover {
+        background-color: #2c3e50;
+        border-radius: 5px;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Profile Styles */
+      .profile {
+        margin: 20px auto;
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile img {
+        height: 300px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .profile h3 {
+        margin: 10px 0;
+        font-size: 1.5em;
+      }
+
+      .profile p {
+        font-size: 1.1em;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .navbar ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          background-color: #34495e;
+          text-align: center;
+          padding: 10px;
+          z-index: 1;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .navbar ul.show {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>CHARITY & FUNDRAISING</h1>
+    </header>
+
+    <nav class="navbar">
+      <div class="logo">MENU</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="navLinks">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="aboutUs.html">ABOUT US</a></li>
+        <li><a href="Campaign.html">CAMPAIGNS</a></li>
+        <li><a href="GetInvolved.html">GET INVOLVED</a></li>
+        <li><a href="contactUs.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2 style="text-align: center;">About Us</h2>
+      <hr />
+      <h3 style="text-align: center;">Our Team</h3>
+
+      <!-- Profile Section -->
+      <div class="profile">
+        <img src="hail.jpg" alt="Muhammad Hail Bin Mohd Ariff" />
+        <h3>MUHAMMAD HAIL BIN MOHD ARIFF</h3>
+        <p>Phone: 018-4701022</p>
+      </div>
+
+      <div class="profile">
+        <img src="Gambar Formal.jpg" alt="Muhammad Nafiz Bin Mohamed Nazarudin" />
+        <h3>MUHAMMAD NAFIZ BIN MOHAMED NAZARUDIN</h3>
+        <p>Phone: 018-3456789</p>
+      </div>
+
+      <div class="profile">
+        <img src="alif.jpg" alt="Muhammad Alif Najmi Bin Sahri" />
+        <h3>MUHAMMAD ALIF NAJMI BIN SAHRI</h3>
+        <p>Phone: 019-7008902</p>
+      </div>
+
+      <div class="profile">
+        <img src="meon.jpg" alt="Muhammad Amirul Bin Norizan" />
+        <h3>MUHAMMAD AMIRUL BIN NORIZAN</h3>
+        <p>Phone: 012-3456789</p>
+      </div>
+
+      <hr />
+
+      <h3 style="text-align: center;">Our Story</h3>
+      <p>
+        Charity & Fundraising was founded in [Year] by a group of passionate individuals who saw a gap in the support available for vulnerable communities. Driven by a shared vision of a more equitable society, we set out to address the challenges faced by those who needed help the most. Over the years, we have grown and evolved, but our core values of empathy, integrity, and determination have remained steadfast.
+      </p>
+
+      <h3 style="text-align: center;">Our Mission</h3>
+      <hr />
+      <p>
+        At Charity & Fundraising, our mission is to empower individuals and communities by providing essential support, resources, and opportunities. We believe that every person has the right to a fulfilling life, and we work tirelessly to break down barriers and create lasting change.
+      </p>
+
+      <a href="ContactUs.html">
+        <img style="display: block; margin: auto;" src="join us.jpg" alt="Join Us" height="150" />
+      </a>
+      <hr />
+
+      <p>
+        We are grateful for the support of our donors, volunteers, and partners who make our work possible. If you share our passion for creating a better world, we invite you to join us. Whether through donations, volunteering, or spreading the word, every action makes a difference.
+      </p>
+      <p>Together, we can build a brighter future for all.</p>
+      <p>Thank you for being a part of our journey.</p>
+      <p>Charity & Fundraising Team</p>
+    </main>
+
+    <footer>
+      <h3>ChrFnd © 2025 All Right Reserved</h3>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

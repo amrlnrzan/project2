@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Now</title>
+  <link href="GetInvolved.html" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .donation-container {
+      background: #fff;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .input-group {
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .input-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus, .input-group select:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
+
+    .submit-btn input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn input:hover {
+      background: #388e3c;
+    }
+
+    .back-btn {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .back-btn a {
+      text-decoration: none;
+      background: #ddd;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .back-btn a:hover {
+      background: #bbb;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: #666;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="donation-container">
+    <h2>Make a Donation</h2>
+    <p>Support our cause by making a donation.</p>
+
+    <form method="get" id="donationForm">
+      <div class="input-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="bank">Bank Name:</label>
+        <select id="bank" name="bank" required>
+          <option value="" disabled selected>Select your bank</option>
+          <option value="Maybank">Maybank</option>
+          <option value="CIMB">CIMB</option>
+          <option value="RHB">RHB</option>
+          <option value="Public Bank">Public Bank</option>
+          <option value="Hong Leong">Hong Leong</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="amount">Donation Amount (RM):</label>
+        <input type="number" id="amount" name="amount" min="1" required />
+      </div>
+
+      <div class="submit-btn">
+        <a href="GetInvolved.html"></a>
+        <input type="submit" value="Donate Now" />
+      </div>
+    </form>
+
+    <div class="back-btn">
+      <a href="GetInvolved.html">Back</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>ChrFnd © 2025 All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", function(event) {
+      const name = document.getElementById("name").value.trim();
+      const bank = document.getElementById("bank").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      const nameRegex = /^[A-Za-z\s]+$/;
+
+      if (!name || !bank || isNaN(amount)) {
+        alert("Please fill in all required fields.");
+        event.preventDefault();
+        return;
+      }
+
+      if (!nameRegex.test(name)) {
+        alert("Full Name should contain only letters and spaces. No numbers or symbols allowed.");
+        event.preventDefault();
+        return;
+      }
+
+      if (amount < 10) {
+        alert("Minimum donation amount is RM10.");
+        event.preventDefault();
+        return;
+      }
+
+      // Show success popup and reset form
+      alert("Thank you for your donation!");
+    });
+  </script>
+
+</body>
+</html>
